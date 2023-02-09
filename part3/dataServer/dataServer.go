@@ -4,9 +4,9 @@ import (
 	"log"
 	"net/http"
 	"os"
-	"storage/part2/dataServer/heartbeat"
-	"storage/part2/dataServer/locate"
-	"storage/part2/dataServer/objects"
+	"storage/part3/dataServer/heartbeat"
+	"storage/part3/dataServer/locate"
+	"storage/part3/dataServer/objects"
 )
 
 func main() {
