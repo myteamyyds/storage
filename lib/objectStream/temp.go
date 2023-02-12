@@ -2,7 +2,7 @@ package objectStream
 
 import (
 	"fmt"
-	"io"
+	"io/ioutil"
 	"net/http"
 	"strings"
 )
@@ -23,20 +23,20 @@ func NewTempPutStream(server, object string, size int64) (*TempPutStream, error)
 	if err != nil {
 		return nil, err
 	}
-	uuid, err := io.ReadAll(response.Body)
+	uuid, err := ioutil.ReadAll(response.Body)
 	if err != nil {
 		return nil, err
 	}
 	return &TempPutStream{server, string(uuid)}, nil
 }
 
-func (w *TempPutStream) write(p []byte) (n int, err error) {
+func (w *TempPutStream) Write(p []byte) (n int, err error) {
 	request, err := http.NewRequest("PATCH", "http://"+w.Server+"/temp/"+w.Uuid, strings.NewReader(string(p)))
 	if err != nil {
 		return 0, err
 	}
-	clinet := http.Client{}
-	response, err := clinet.Do(request)
+	client := http.Client{}
+	response, err := client.Do(request)
 	if err != nil {
 		return 0, err
 	}

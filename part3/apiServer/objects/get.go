@@ -1,6 +1,7 @@
 package objects
 
 import (
+	"fmt"
 	"io"
 	"log"
 	"net/http"
@@ -24,6 +25,7 @@ func get(w http.ResponseWriter, r *http.Request) {
 		}
 	}
 	meta, err := es.GetMetadata(name, version)
+	fmt.Println(meta)
 	if err != nil {
 		log.Println(err)
 		w.WriteHeader(http.StatusInternalServerError)
@@ -35,6 +37,7 @@ func get(w http.ResponseWriter, r *http.Request) {
 	}
 	object := url.PathEscape(meta.Hash)
 	stream, err := getStream(object)
+	fmt.Println(stream)
 	if err != nil {
 		log.Println(err)
 		w.WriteHeader(http.StatusNotFound)

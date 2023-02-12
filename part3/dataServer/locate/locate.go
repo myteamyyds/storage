@@ -10,7 +10,7 @@ import (
 
 func Locate(name string) bool {
 	_, err := os.Stat(name)
-	return os.IsNotExist(err)
+	return !os.IsNotExist(err)
 }
 
 func StartLocate() {

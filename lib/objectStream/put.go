@@ -19,7 +19,7 @@ func NewPutStream(server, object string) *PutStream {
 		client := http.Client{}
 		result, err := client.Do(request)
 		if err == nil && result.StatusCode != http.StatusOK {
-			err = fmt.Errorf("dataServer return htto code %s", result.StatusCode)
+			err = fmt.Errorf("dataServer return http code %d", result.StatusCode)
 		}
 		channel <- err
 	}()

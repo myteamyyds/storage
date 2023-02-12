@@ -43,7 +43,7 @@ func removeExpireDataServer() {
 	}
 }
 
-func GetDataServer() []string {
+func GetDataServers() []string {
 	mutex.Lock()
 	defer mutex.Unlock()
 	dataServer := make([]string, 0)

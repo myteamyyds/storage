@@ -2,7 +2,7 @@ package objects
 
 import (
 	"fmt"
-	"storage/objectStream"
+	"storage/lib/objectStream"
 	"storage/part2/apiServer/heartbeat"
 )
 

@@ -1,9 +1,13 @@
 package objects
 
-import "net/http"
+import (
+	"fmt"
+	"net/http"
+)
 
 func Handler(w http.ResponseWriter, r *http.Request) {
 	method := r.Method
+	fmt.Println(method)
 	if method == http.MethodPut {
 		put(w, r)
 		return

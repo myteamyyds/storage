@@ -3,7 +3,7 @@ package objects
 import (
 	"fmt"
 	"io"
-	"storage/objectStream"
+	"storage/lib/objectStream"
 	"storage/part3/apiServer/locate"
 )
 

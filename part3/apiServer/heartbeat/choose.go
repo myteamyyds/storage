@@ -1,10 +1,14 @@
 package heartbeat
 
-import "math/rand"
+import (
+	"fmt"
+	"math/rand"
+)
 
 func ChooseRandomDataServer() string {
-	dataServers := GetDataServer()
+	dataServers := GetDataServers()
 	count := len(dataServers)
+	fmt.Println("dataServer.size=", len(dataServers))
 	if count == 0 {
 		return ""
 	}
