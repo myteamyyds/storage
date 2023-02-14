@@ -112,9 +112,9 @@ func AddVersion(dname, hash string, size int64) error {
 }
 
 func SearchAllVersions(dname string, from, size int) ([]Metadata, error) {
-	url := fmt.Sprintf("http://%s/metadata/_search?sort=dname,version&from=%d&size=%d", os.Getenv("ES_SERVER"), from, size)
+	url := fmt.Sprintf("http://%s/metadata/_search?sort=version&from=%d&size=%d", os.Getenv("ES_SERVER"), from, size)
 	if dname != "" {
-		url += "&q=name:" + dname
+		url += "&q=dname:" + dname
 	}
 	result, err := http.Get(url)
 	if err != nil {

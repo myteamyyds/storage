@@ -11,6 +11,7 @@ import (
 
 func Handler(w http.ResponseWriter, r *http.Request) {
 	method := r.Method
+	fmt.Println("进入versions + ", method)
 	if method != http.MethodGet {
 		w.WriteHeader(http.StatusMethodNotAllowed)
 		return
