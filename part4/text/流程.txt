@@ -18,8 +18,8 @@
     docker start elasticsearch-head-storage
 
 4.设置环境变量
-    export ES_SERVER=172.24.170.228:9200
-    export RABBITMQ_SERVER=amqp://guest:guest@172.24.170.228:5672
+    export ES_SERVER=172.17.55.200:9200
+    export RABBITMQ_SERVER=amqp://guest:guest@172.17.55.200:5672
 
 5.启动程序
     LISTEN_ADDRESS=10.29.1.1:8800 STORAGE_ROOT=/tmp/1 go run dataServer.go &
