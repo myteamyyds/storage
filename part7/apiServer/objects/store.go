@@ -6,7 +6,7 @@ import (
 	"net/http"
 	"net/url"
 	"storage/lib/utils"
-	"storage/part6/apiServer/locate"
+	"storage/part7/apiServer/locate"
 )
 
 func storeObject(r io.Reader, hash string, size int64) (int, error) {

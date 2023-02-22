@@ -2,7 +2,7 @@ package objectStream
 
 import (
 	"fmt"
-	"io/ioutil"
+	"io"
 	"net/http"
 	"strings"
 )
@@ -23,7 +23,7 @@ func NewTempPutStream(server, object string, size int64) (*TempPutStream, error)
 	if err != nil {
 		return nil, err
 	}
-	uuid, err := ioutil.ReadAll(response.Body)
+	uuid, err := io.ReadAll(response.Body)
 	if err != nil {
 		return nil, err
 	}

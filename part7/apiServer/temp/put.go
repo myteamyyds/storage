@@ -9,7 +9,7 @@ import (
 	"storage/lib/es"
 	"storage/lib/rs"
 	"storage/lib/utils"
-	"storage/part6/apiServer/locate"
+	"storage/part7/apiServer/locate"
 	"strings"
 )
 
