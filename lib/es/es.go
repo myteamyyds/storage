@@ -161,7 +161,7 @@ func SearchVersionStatus(minDocCount int) ([]Bucket, error) {
 			"aggs": {
 				"group_by_name": {
 					"terms": {
-						"field": "name",
+						"field": "dname",
 						"min_doc_count": %d
 					},
 					"aggs": {
