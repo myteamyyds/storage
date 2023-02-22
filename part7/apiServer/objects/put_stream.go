@@ -3,7 +3,7 @@ package objects
 import (
 	"fmt"
 	"storage/lib/rs"
-	"storage/part6/apiServer/heartbeat"
+	"storage/part7/apiServer/heartbeat"
 )
 
 func putStream(hash string, size int64) (*rs.RSPutStream, error) {

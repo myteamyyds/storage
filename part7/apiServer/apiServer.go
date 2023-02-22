@@ -4,11 +4,11 @@ import (
 	"log"
 	"net/http"
 	"os"
-	"storage/part6/apiServer/heartbeat"
-	"storage/part6/apiServer/locate"
-	"storage/part6/apiServer/objects"
-	"storage/part6/apiServer/temp"
-	"storage/part6/apiServer/version"
+	"storage/part7/apiServer/heartbeat"
+	"storage/part7/apiServer/locate"
+	"storage/part7/apiServer/objects"
+	"storage/part7/apiServer/temp"
+	"storage/part7/apiServer/version"
 )
 
 func main() {

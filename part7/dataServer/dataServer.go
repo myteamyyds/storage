@@ -4,10 +4,10 @@ import (
 	"log"
 	"net/http"
 	"os"
-	"storage/part6/dataServer/heartbeat"
-	"storage/part6/dataServer/locate"
-	"storage/part6/dataServer/objects"
-	"storage/part6/dataServer/temp"
+	"storage/part7/dataServer/heartbeat"
+	"storage/part7/dataServer/locate"
+	"storage/part7/dataServer/objects"
+	"storage/part7/dataServer/temp"
 )
 
 func main() {
